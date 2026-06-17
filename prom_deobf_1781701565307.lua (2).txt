@@ -1,0 +1,1524 @@
+do
+    local _g = _G;
+    local _unpack = _g and _g.unpack or table and table.unpack;
+    if task == nil then
+        task = {};
+        local function fn2(fn, ...)
+            if type(fn) ~= "function" then
+                return nil;
+            end;
+            local _args = {...};
+            if coroutine and coroutine.wrap then
+                return coroutine.wrap(function()
+                    if _unpack then
+                        return fn(_unpack(_args));
+                    end;
+                    return fn();
+                end)();
+            end;
+            if _unpack then
+                return fn(_unpack(_args));
+            end;
+            return fn();
+        end;
+        task.spawn = fn2;
+        task.defer = fn2;
+        task.wait = function(seconds)
+            local _seconds = tonumber(seconds) or 0;
+            if os and os.clock and _seconds > 0 then
+                local _until = os.clock() + _seconds;
+                while os.clock() < _until do end;
+            end;
+            return _seconds;
+        end;
+    end;
+    if setclipboard == nil then
+        setclipboard = function(_)
+            return nil;
+        end;
+    end;
+    if toclipboard == nil then
+        toclipboard = function(_)
+            return nil;
+        end;
+    end;
+    if writefile == nil then
+        writefile = function(_, _)
+            return nil;
+        end;
+    end;
+    if readfile == nil then
+        readfile = function(_)
+            return "";
+        end;
+    end;
+    if game == nil then
+        game = {
+            GetService = function(_, _name)
+                return {};
+            end,
+            HttpGet = function()
+                return "";
+            end
+        };
+    end;
+    if workspace == nil then
+        workspace = {};
+    end;
+    if Instance == nil then
+        Instance = {
+            new = function()
+                return {};
+            end
+        };
+    end;
+    if Color3 == nil then
+        Color3 = {
+            fromRGB = function(arg1, arg2, arg3)
+                return {
+                    r = arg1,
+                    g = arg2,
+                    b = arg3
+                };
+            end
+        };
+    end;
+    if UDim2 == nil then
+        UDim2 = {
+            new = function(...)
+                return {...};
+            end
+        };
+    end;
+end;
+local Env = getfenv();
+local tbl = {};
+local args = {...};
+local flag = true;
+local stringLibGmatch = string.gmatch;
+local function fn3(...)
+    return;
+end;
+local flag2 = false;
+local pcallResult = pcall(function(...)
+    flag2 = true;
+    return;
+end);
+local v22 = pcallResult;
+if pcallResult then
+    v22 = flag2;
+end;
+local num = 1;
+local mathLibRandom = math.random;
+local tableLibConcat = table.concat;
+local function fn4(...)
+    return;
+end;
+local tmp = table and table.unpack or unpack;
+local r510 = mathLibRandom(3, 65);
+local tbl2 = {
+    pcall(function(...)
+        return "OcVf1RPOAfw" / (7526310 - "DCK0pMgtcRRYIBs" ^ 6419905);
+    end)
+};
+local v72 = tbl2[2];
+local tonumber2 = tonumber(stringLibGmatch(tostring(v72), ":(%d*):")());
+for index = 1, r510 do
+    d = index;
+    mathLibRandom2 = math.random(1, 100);
+    r511 = mathLibRandom(0, 255);
+    r512 = mathLibRandom(1, mathLibRandom2);
+    tmp2 = mathLibRandom(1, 2) == 1;
+    v8Gsub = v72.gsub(v72, ":(%d*):", ":" .. tostring(mathLibRandom(0, 10000)) .. ":");
+    tbl3 = {
+        pcall(function(...)
+            if mathLibRandom(1, 2) == 1 or d == r510 then
+                flag = flag and tonumber2 == tonumber(stringLibGmatch(tostring((({
+                    pcall(function(...)
+                        return "A6P9Aoz" / (12090201 - "0xWKxAIPG3e" ^ 2143589);
+                    end)
+                }))[2]), ":(%d*):")());
+            end;
+            if tmp2 then
+                args = error(v8Gsub, 0);
+            end;
+            args = {};
+            for index2 = 1, mathLibRandom2 do
+                args[index2] = mathLibRandom(0, 255);
+            end;
+            args[r512] = r511;
+            return tmp(args);
+        end)
+    };
+    if tmp2 then
+        flag = flag and (pcall(function(...)
+            if mathLibRandom(1, 2) == 1 or d == r510 then
+                flag = flag and tonumber2 == tonumber(stringLibGmatch(tostring((({
+                    pcall(function(...)
+                        return "A6P9Aoz" / (12090201 - "0xWKxAIPG3e" ^ 2143589);
+                    end)
+                }))[2]), ":(%d*):")());
+            end;
+            if tmp2 then
+                args = error(v8Gsub, 0);
+            end;
+            args = {};
+            for index2 = 1, mathLibRandom2 do
+                args[index2] = mathLibRandom(0, 255);
+            end;
+            args[r512] = r511;
+            return tmp(args);
+        end) == false and tbl3[2] == v8Gsub);
+    end;
+end;
+flag = flag and 0 == 0;
+if flag then
+    tbl2 = {};
+    mathLibFloor = math.floor;
+    num2 = 0;
+    num3 = 2;
+    fn4 = {};
+    tbl4 = {};
+    num4 = 0;
+    for K = 1, 256 do
+        tbl2[K] = K;
+    end;
+    v72 = #tbl2 == 0;
+    K = table.remove(tbl2, math.random(1, #tbl2));
+    tbl4[K] = string.char(K - 1);
+    if #tbl2 == 0 then
+        tbl5 = {};
+        tbl6 = {};
+        setmetatable2 = setmetatable({}, {
+            ["__index"] = tbl6,
+            ["__metatable"] = nil
+        });
+        num = game;
+        loadstring2 = loadstring(num.HttpGet(num, "https://raw.githubusercontent.com/nothingonyouz/uirip/refs/heads/main/VSCodeUILib.lua"))();
+        index2 = game;
+        index2 = game;
+        xgetService = index2.GetService(index2, "ReplicatedStorage");
+        pcallResult = game;
+        v2GetService = pcallResult.GetService(pcallResult, "RunService");
+        fn4 = game;
+        v6GetService = fn4.GetService(fn4, "UserInputService");
+        localPlayer = index2.GetService(index2, "Players").LocalPlayer;
+        tbl7 = {
+            ["AutoCollectRainbow"] = false,
+            ["AutoHarvest"] = false,
+            ["AutoSell"] = false,
+            ["AutoSteal"] = false,
+            ["AutoBuy"] = false,
+            ["AutoBuySeeds"] = false,
+            ["AutoBuyGear"] = false,
+            ["SelectedSeeds"] = {
+                "Carrot"
+            },
+            ["SelectedGear"] = {
+                "Common Watering Can"
+            },
+            ["StealLoop"] = nil,
+            ["HarvestLoop"] = nil,
+            ["CollectLoop"] = nil,
+            ["SellLoop"] = nil,
+            ["BuyLoop"] = nil,
+            ["IsHarvesting"] = false,
+            ["IsStealing"] = false,
+            ["MyPlot"] = nil
+        };
+        local function fn5(...)
+            if tbl7.MyPlot and tbl7.MyPlot.Parent then
+                return tbl7.MyPlot;
+            end;
+            tableLibConcat = localPlayer;
+            args = tableLibConcat.WaitForChild(tableLibConcat, "PlayerGui");
+            print("[Plot] Scanning PlayerGui for player's plot...");
+            for index3 = 1, 8 do
+                pcallResult = args.FindFirstChild(args, "Plot" .. index3);
+                if pcallResult then
+                    fn4 = pcallResult.FindFirstChild(pcallResult, "PlayerFrame");
+                    if fn4 then
+                        v6GetService = fn4.FindFirstChild(fn4, "Title");
+                        if v6GetService then
+                            v22 = v6GetService.Text;
+                        end;
+                        if v6GetService then
+                            tableLibConcat = print;
+                            v22 = tableLibConcat("[Plot] Plot" .. index3 .. " Title: '" .. v6GetService.Text .. "'");
+                            if v6GetService.Text == "Your Garden" or v6GetService.Text == localPlayer.Name then
+                                v22 = print("[Plot] Found player's plot: Plot" .. index3);
+                                tableLibConcat = workspace;
+                                num4 = setmetatable2;
+                                v5FindFirstChild = tableLibConcat.FindFirstChild(tableLibConcat, "Gardens");
+                                if v5FindFirstChild then
+                                    num4 = v5FindFirstChild.FindFirstChild(v5FindFirstChild, "Plot" .. index3);
+                                    if num4 then
+                                        v22 = print("[Plot] Found workspace plot: " .. num4.Name);
+                                        tbl7.MyPlot = num4;
+                                        v22 = print("[Plot] Cached plot for future use!");
+                                        return num4;
+                                    else
+                                        v22 = print("[Plot] ERROR: Plot" .. index3 .. " not found in workspace!");
+                                    end;
+                                else
+                                    v22 = print("[Plot] ERROR: Gardens folder not found in workspace!");
+                                end;
+                            end;
+                        end;
+                    end;
+                end;
+            end;
+            print("[Plot] ERROR: Could not find player's plot in PlayerGui!");
+            return nil;
+        end;
+        local function fn6(arg1_2, ...)
+            args = arg1_2;
+            index3 = args.match(args, "_(.+)$");
+            if index3 then
+                return index3;
+            else
+                v22 = arg1_2;
+            end;
+        end;
+        local function fn7(arg1_3, ...)
+            args = arg1_3;
+            index3 = args.match(args, "_([^_]+)$");
+            if index3 then
+                return index3;
+            else
+                v22 = arg1_3;
+            end;
+        end;
+        local function fn8(...)
+            return true;
+        end;
+        local function fn9(arg1_4, ...)
+            args = arg1_4;
+            index3 = args.match(args, "_(.+)$");
+            if index3 then
+                return index3.gsub(index3, "_", "$");
+            end;
+            return args;
+        end;
+        local function fn10(arg1_5, ...)
+            args = arg1_5;
+            num = "\x02?8\xd3b\xde";
+            pcallResult = 3203877963219;
+            index2 = args.FindFirstChild(args, setmetatable2[r16(num, pcallResult)]);
+            if index2 then
+                pcallResult = index2.GetChildren;
+                num = {
+                    pcallResult(index2)
+                };
+                v23 = pcallResult[3];
+                num = pcallResult[1];
+                for v23, fn4 in num,  pairs(j(num)) do
+                    pcallResult = v23;
+                    v6GetService = fn7(fn4.Name);
+                    if v6GetService then
+                        v5FindFirstChild = table.insert({}, {
+                            ["uid"] = v6GetService,
+                            ["type"] = "plant",
+                            ["name"] = fn4.Name
+                        });
+                    end;
+                end;
+            end;
+            return {};
+        end;
+        local function fn11(arg1_6, ...)
+            num = "W\xb0\x10\xf7\x12(";
+            args = arg1_6;
+            pcallResult = 9549545263454;
+            index2 = args.FindFirstChild(args, setmetatable2[r16(num, pcallResult)]);
+            if index2 then
+                pcallResult = index2.GetChildren;
+                num = {
+                    pcallResult(index2)
+                };
+                v23 = pcallResult[3];
+                num = pcallResult[1];
+                for v23, fn4 in num,  pairs(j(num)) do
+                    pcallResult = v23;
+                    if fn4.FindFirstChild(fn4, "Fruits") then
+                        v72 = v6GetService.GetChildren;
+                        fn6 = v72[3];
+                        num4 = v72[2];
+                        for fn6, v72 in pairs(v72(v6GetService)) do
+                            tbl2 = fn6;
+                            K = fn9(v72.Name);
+                            if K then
+                                index = table.insert({}, {
+                                    ["uid"] = K,
+                                    ["type"] = "fruit",
+                                    ["name"] = v72.Name
+                                });
+                            end;
+                        end;
+                    end;
+                end;
+            end;
+            return {};
+        end;
+        local function fn12(arg1_7, ...)
+            arg17 = arg1_7;
+            pcall(function(...)
+                tableLibConcat = tbl[58];
+                v22 = tableLibConcat.WaitForChild(tableLibConcat, "SharedModules");
+                tableLibConcat = v22.WaitForChild(v22, "Packet");
+                v22 = tableLibConcat.WaitForChild(tableLibConcat, "RemoteEvent");
+                tableLibConcat = v22.FireServer(v22, unpack({
+                    buffer.fromstring("\xb1\x00$" .. arg17 .. "\x00")
+                }));
+                return;
+            end);
+            return;
+        end;
+        local function fn13(arg1_8, ...)
+            arg18 = arg1_8;
+            pcall(function(...)
+                tableLibConcat = tbl[14];
+                v22 = tableLibConcat.WaitForChild(tableLibConcat, "SharedModules");
+                tableLibConcat = v22.WaitForChild(v22, "Packet");
+                v22 = tableLibConcat.WaitForChild(tableLibConcat, "RemoteEvent");
+                tableLibConcat = v22.FireServer(v22, unpack({
+                    buffer.fromstring("\xb1\x00$" .. arg18 .. "\x00")
+                }));
+                return;
+            end);
+            return;
+        end;
+        local function fn14(...)
+            tableLibConcat = workspace;
+            args = tableLibConcat.FindFirstChild(tableLibConcat, "Map");
+            if not args then
+                return;
+            end;
+            index3 = args.FindFirstChild(args, "SeedPackSpawnServerLocations");
+            if not index3 then
+                return;
+            end;
+            index2 = localPlayer.Character;
+            if not index2 then
+                return;
+            end;
+            if not index2.FindFirstChild(index2, "HumanoidRootPart") then
+                return;
+            end;
+            tableLibConcat = game;
+            v6GetService = index3.GetChildren;
+            v23 = tableLibConcat.GetService(tableLibConcat, "VirtualInputManager");
+            fn4 = {
+                v6GetService(index3)
+            };
+            pcallResult = v6GetService[3];
+            num = v6GetService[2];
+            for pcallResult, v5FindFirstChild in pairs(j("pairs")) do
+                v6GetService = pcallResult;
+                if not tbl7.AutoCollectRainbow then
+                    break;
+                else
+                    if v5FindFirstChild.IsA(v5FindFirstChild, "BasePart") then
+                        index2.FindFirstChild(index2, "HumanoidRootPart").CFrame = v5FindFirstChild.CFrame + Vector3.new(0, 3, 0);
+                        num4 = task.wait(.15);
+                        tableLibConcat = v23.SendKeyEvent(v23, true, "E", false, game);
+                        num4 = task.wait(.05);
+                        tableLibConcat = v23.SendKeyEvent(v23, false, "E", false, game);
+                        num4 = task.wait(.1);
+                    end;
+                end;
+            end;
+            return;
+        end;
+        local function fn15(...)
+            pcall(function(...)
+                local tbl8 = {
+                    tbl8[1],
+                    tbl8[2],
+                    tbl8[3]
+                };
+                tableLibConcat = tbl[tbl8[3]];
+                v22 = tableLibConcat.WaitForChild(tableLibConcat, "SharedModules");
+                tableLibConcat = v22.WaitForChild(v22, "Packet");
+                v22 = tableLibConcat.WaitForChild(tableLibConcat, "RemoteEvent");
+                tableLibConcat = v22.FireServer(v22, unpack({
+                    buffer.fromstring("\x99\x00\x12")
+                }));
+                return;
+            end);
+            return;
+        end;
+        local function fn16(arg1_9, ...)
+            args = arg1_9;
+            tableLibConcat = xgetService;
+            v22 = tableLibConcat.WaitForChild(tableLibConcat, "SharedModules");
+            tableLibConcat = v22.WaitForChild(v22, "Packet");
+            v22 = tableLibConcat.WaitForChild(tableLibConcat, "RemoteEvent");
+            v22.FireServer(v22, unpack({
+                buffer.fromstring("g\x00" .. string.char(string.len(args)) .. args)
+            }));
+            return;
+        end;
+        local function fn17(arg1_10, ...)
+            args = arg1_10;
+            tableLibConcat = xgetService;
+            v22 = tableLibConcat.WaitForChild(tableLibConcat, "SharedModules");
+            tableLibConcat = v22.WaitForChild(v22, "Packet");
+            v22 = tableLibConcat.WaitForChild(tableLibConcat, "RemoteEvent");
+            v22.FireServer(v22, unpack({
+                buffer.fromstring("k\x00" .. string.char(string.len(args)) .. args)
+            }));
+            return;
+        end;
+        local function fn18(arg1_11, ...)
+            tableLibConcat = xgetService;
+            args = arg1_11;
+            index3 = tableLibConcat.FindFirstChild(tableLibConcat, "StockValues");
+            if index3 then
+                index2 = index3.FindFirstChild(index3, "SeedShop");
+                if index2 then
+                    xfindFirstChild = index2.FindFirstChild(index2, "Items");
+                    if xfindFirstChild then
+                        v23 = xfindFirstChild.FindFirstChild(xfindFirstChild, arg1_11);
+                        if v23 then
+                            v22 = v23.IsA(v23, "IntValue");
+                        end;
+                        if v23 then
+                            return v23.Value;
+                        end;
+                    end;
+                end;
+            end;
+            return 0;
+        end;
+        local function fn19(arg1_12, ...)
+            tableLibConcat = xgetService;
+            args = arg1_12;
+            index3 = tableLibConcat.FindFirstChild(tableLibConcat, "StockValues");
+            if index3 then
+                index2 = index3.FindFirstChild(index3, "GearShop");
+                if index2 then
+                    xfindFirstChild = index2.FindFirstChild(index2, "Items");
+                    if xfindFirstChild then
+                        v23 = xfindFirstChild.FindFirstChild(xfindFirstChild, arg1_12);
+                        if v23 then
+                            v22 = v23.IsA(v23, "IntValue");
+                        end;
+                        if v23 then
+                            return v23.Value;
+                        end;
+                    end;
+                end;
+            end;
+            return 0;
+        end;
+        local function fn20(arg1_13, ...)
+            pcallResult = "\x12\x866\x02;\xa5\xab";
+            args = arg1_13;
+            tableLibConcat = workspace;
+            num = r16(pcallResult, 8578873380762);
+            index2 = tableLibConcat.FindFirstChild(tableLibConcat, setmetatable2[num]);
+            if index2 then
+                pcallResult = index2.GetChildren;
+                num = {
+                    pcallResult(index2)
+                };
+                xfindFirstChild = pcallResult[2];
+                num = pcallResult[1];
+                for v23, fn4 in pairs(j(num)) do
+                    pcallResult = v23;
+                    v5FindFirstChild = fn4.Name;
+                    num4 = v5FindFirstChild.match(v5FindFirstChild, "^Plot%d+$");
+                    if num4 then
+                        v6GetService = fn4 ~= arg1_13;
+                    end;
+                    if num4 then
+                        v6GetService = table.insert({}, fn4);
+                    end;
+                end;
+            end;
+            return {};
+        end;
+        local function fn21(...)
+            return false;
+        end;
+        local function fn22(...)
+            if pcall(function(...)
+                local tbl8 = {
+                    tbl8[1],
+                    tbl8[2],
+                    tbl8[3]
+                };
+                tableLibConcat = tbl[tbl8[1]];
+                args = tableLibConcat.WaitForChild(tableLibConcat, "PlayerGui");
+                index3 = args.FindFirstChild(args, "TopNotification");
+                if not index3 then
+                    return false;
+                end;
+                index2 = index3.FindFirstChild(index3, "Frame");
+                if not index2 then
+                    return false;
+                end;
+                xfindFirstChild = index2.FindFirstChild(index2, "Notification_UI");
+                if not xfindFirstChild then
+                    return false;
+                end;
+                v23 = xfindFirstChild.FindFirstChild(xfindFirstChild, "Content");
+                if not v23 then
+                    return false;
+                end;
+                num = v23.FindFirstChild(v23, "TextLabel");
+                if not num then
+                    return false;
+                end;
+                v22 = num.Text;
+                return v22.find(v22, "The owner is in their garden") ~= nil;
+            end) then
+                return index2[2];
+            end;
+            return false;
+        end;
+        local function fn23(arg1_14, arg2_14, arg3_14, ...)
+            index3 = arg2_14;
+            args = arg1_14;
+            if args then
+                xfindFirstChild = args.Parent;
+            end;
+            tableLibConcat = tbl[index3];
+            if args then
+                if (args.Position - index3).Magnitude < (arg3_14 or 1) then
+                    args.CFrame = args.CFrame * CFrame.new(0, 2, 0);
+                    num = task.wait(.05);
+                    return args.Position;
+                end;
+                return args.Position;
+            end;
+            return index3;
+        end;
+        local function jj(arg1_15, arg2_15, ...)
+            args = arg1_15;
+            if not args or not args.Parent then
+                return;
+            end;
+            v22 = arg2_15;
+            args.CFrame = v22;
+            task.wait(.1);
+            return;
+        end;
+        local function fn24(arg1_16, arg2_16, ...)
+            index3 = arg2_16;
+            arg116 = arg1_16;
+            pcall(function(...)
+                arg116.HoldDuration = 0;
+                return;
+            end);
+            if pcall(function(...)
+                v22 = fireproximityprompt(arg116);
+                return;
+            end) then
+                v22 = task.wait(.05);
+                return;
+            end;
+            if pcall(function(...)
+                tableLibConcat = arg116;
+                v22 = tableLibConcat.InputHoldBegin(tableLibConcat);
+                v22 = task.wait(.02);
+                tableLibConcat = arg116;
+                v22 = tableLibConcat.InputHoldEnd(tableLibConcat);
+                return;
+            end) then
+                v22 = task.wait(.05);
+                return;
+            end;
+            tableLibConcat = game;
+            v23 = tableLibConcat.GetService(tableLibConcat, "VirtualInputManager");
+            v23.SendKeyEvent(v23, true, "E", false, game);
+            task.wait(.05);
+            v23.SendKeyEvent(v23, false, "E", false, game);
+            task.wait(.05);
+            return;
+        end;
+        local function fn25(arg1_17, arg2_17, ...)
+            args = arg1_17;
+            index2 = localPlayer.Character;
+            if not index2 then
+                return false;
+            end;
+            xfindFirstChild = index2.FindFirstChild(index2, "HumanoidRootPart");
+            if not xfindFirstChild then
+                return false;
+            end;
+            v23 = args.FindFirstChild(args, "Plants");
+            if not v23 or #v23.GetChildren(v23) == 0 then
+                v22 = print("[Steal] No plants in " .. args.Name .. ", skipping");
+                return true;
+            end;
+            num = xfindFirstChild.Position;
+            v5FindFirstChild = v23.GetChildren;
+            v6GetService = {
+                v5FindFirstChild(v23)
+            };
+            v6GetService = v5FindFirstChild[1];
+            fn4 = v5FindFirstChild[3];
+            for fn4, num4 in v6GetService,  pairs(j(v6GetService)) do
+                v5FindFirstChild = fn4;
+                if not tbl[num4].AutoSteal then
+                    break;
+                else
+                    fn23(xfindFirstChild, xfindFirstChild.Position);
+                    fn6 = num4.FindFirstChild(num4, "HarvestPart");
+                    if fn6 then
+                        K = fn6.IsA(fn6, "BasePart");
+                    end;
+                    if fn6 then
+                        K = fn6.FindFirstChild(fn6, "StealPrompt");
+                        if K then
+                            index = K.IsA(K, "ProximityPrompt");
+                        end;
+                        if K then
+                            xfindFirstChild.CFrame = fn6.CFrame + Vector3.new(0, 3, 0);
+                            index = task.wait(.15);
+                            if fn22() then
+                                index = print("[Steal] Owner home in " .. arg1_17.Name .. "! Skipping.");
+                                index2.FindFirstChild(index2, "HumanoidRootPart").CFrame = arg2_17;
+                                return false;
+                            else
+                                index = fn24(K, xfindFirstChild);
+                                index = task.wait(.1);
+                                index = arg2_17;
+                                xfindFirstChild.CFrame = index;
+                                index = task.wait(.1);
+                            end;
+                        end;
+                    end;
+                    tbl2 = num4.FindFirstChild(num4, "Fruits");
+                    if tbl2 then
+                        K = #tbl2.GetChildren(tbl2) > 0;
+                    end;
+                    if tbl2 then
+                        getChildren = tbl2.GetChildren;
+                        a = getChildren[3];
+                        index = getChildren[2];
+                        for a, getChildren in pairs(getChildren(tbl2)) do
+                            w2 = a;
+                            if not tbl[num4].AutoSteal then
+                            else
+                                fn23(xfindFirstChild, v72);
+                                afindFirstChild = getChildren.FindFirstChild(getChildren, "HarvestPart");
+                                if afindFirstChild then
+                                    zIsA = afindFirstChild.IsA(afindFirstChild, "BasePart");
+                                end;
+                                if afindFirstChild then
+                                    zIsA = afindFirstChild.FindFirstChild(afindFirstChild, "StealPrompt");
+                                    if zIsA then
+                                        vIsA = zIsA.IsA(zIsA, "ProximityPrompt");
+                                    end;
+                                    if zIsA then
+                                        xfindFirstChild.CFrame = afindFirstChild.CFrame + Vector3.new(0, 3, 0);
+                                        vIsA = task.wait(.15);
+                                        if fn22() then
+                                            vIsA = print("[Steal] Owner home in " .. arg1_17.Name .. "! Skipping.");
+                                            index2.FindFirstChild(index2, "HumanoidRootPart").CFrame = arg2_17;
+                                            return false;
+                                        else
+                                            vIsA = fn24(zIsA, xfindFirstChild);
+                                            vIsA = task.wait(.1);
+                                            vIsA = arg2_17;
+                                            xfindFirstChild.CFrame = vIsA;
+                                            vIsA = task.wait(.1);
+                                        end;
+                                    end;
+                                end;
+                            end;
+                        end;
+                    end;
+                end;
+            end;
+            xfindFirstChild.CFrame = arg2_17;
+            return true;
+        end;
+        game2 = game;
+        njGetService = game2.GetService(game2, "UserInputService");
+        aj = njGetService.TouchEnabled and not njGetService.GetService(njGetService, "UserInputService").KeyboardEnabled;
+        tableLibConcat = tbl[index3];
+        if aj then
+            game2 = workspace.CurrentCamera.ViewportSize;
+            udim2Value = UDim2.new(0, math.min(game2.X - 20, 680), 0, math.min(game2.Y - 40, 440));
+        else
+            udim2Value = UDim2.new(0, 740, 0, 470);
+        end;
+        game2 = loadstring2;
+        mj = tableLibConcat;
+        if aj then
+            center = "center";
+        end;
+        tableLibConcat = tableLibConcat;
+        njCreateWindow = game2.CreateWindow(game2, {
+            ["Title"] = "LocalHub - Grow a Garden 2",
+            ["Subtitle"] = "g2g.lua \xe2\x80\x94 LocalHub",
+            ["Size"] = nil,
+            ["ToggleKey"] = Enum.KeyCode.RightShift,
+            ["ConfigFolder"] = "LocalHub_G2G",
+            ["Logo"] = tostring(124163837094498),
+            ["TogglePosition"] = aj or "left",
+            ["ToggleSize"] = aj and 64 or 52
+        });
+        r242 = loadstring2;
+        r242.Notify(r242, {
+            ["Title"] = "LocalHub",
+            ["Text"] = "Grow a Garden 2 loaded successfully!",
+            ["Type"] = "success",
+            ["Duration"] = 4
+        });
+        r242 = njCreateWindow;
+        fjCreateTab = r242.CreateTab(r242, {
+            ["Name"] = "Farm",
+            ["Icon"] = "target"
+        });
+        r242 = fjCreateTab.CreateSection(fjCreateTab, "Auto Farming");
+        r242.CreateToggle(r242, {
+            ["Name"] = "Auto Collect Rainbow Seed",
+            ["Default"] = false,
+            ["Flag"] = "auto_collect_rainbow",
+            ["Callback"] = function(arg1_18, ...)
+                args = arg1_18;
+                tbl7.AutoCollectRainbow = args;
+                if args then
+                    v22 = spawn(function(...)
+                        while tbl7.AutoCollectRainbow do
+                            v22 = pcall(fn14);
+                            v22 = task.wait(1);
+                        end;
+                        return;
+                    end);
+                end;
+                return;
+            end
+        });
+        r242.CreateToggle(r242, {
+            ["Name"] = "Auto Harvest",
+            ["Default"] = false,
+            ["Flag"] = "auto_harvest",
+            ["Callback"] = function(arg1_19, ...)
+                args = arg1_19;
+                tbl7.AutoHarvest = args;
+                if args then
+                    v22 = print("[Harvest] Auto Harvest enabled");
+                    v22 = spawn(function(...)
+                        while tbl7.AutoHarvest do
+                            v22 = pcall(function(...)
+                                v22 = print("[Harvest] ========== Starting harvest cycle ==========");
+                                args = fn5();
+                                if args then
+                                    v22 = print("[Harvest] Found player plot: " .. args.Name);
+                                    index3 = fn11(args);
+                                    v23 = #index3 .. " fruits to harvest";
+                                    v22 = print("[Harvest] Found " .. v23);
+                                    index2 = v23[2];
+                                    v23 = v23[1];
+                                    for xfindFirstChild, pcallResult in pairs(index3) do
+                                        num = xfindFirstChild;
+                                        if not tbl7.AutoHarvest then
+                                        else
+                                            fn4 = fn13(pcallResult.uid);
+                                            fn4 = task.wait(.1);
+                                        end;
+                                    end;
+                                    index2 = fn10(args);
+                                    pcallResult = #index2 .. " plants to harvest";
+                                    xfindFirstChild = print("[Harvest] Found " .. pcallResult);
+                                    num = pcallResult[3];
+                                    for num, fn4 in pcallResult[1],  pairs(index2) do
+                                        pcallResult = num;
+                                        if not tbl7.AutoHarvest then
+                                        else
+                                            v6GetService = fn12(fn4.uid);
+                                            v6GetService = task.wait(.1);
+                                        end;
+                                    end;
+                                    xfindFirstChild = print("[Harvest] ========== Cycle complete ==========");
+                                else
+                                    index3 = print("[Harvest] ERROR: Could not find player plot!");
+                                end;
+                                return;
+                            end);
+                            v22 = task.wait(2);
+                        end;
+                        v22 = print("[Harvest] Auto Harvest disabled");
+                        return;
+                    end);
+                else
+                    v22 = print("[Harvest] Auto Harvest disabled");
+                end;
+                return;
+            end
+        });
+        r242.CreateToggle(r242, {
+            ["Name"] = "Auto Sell",
+            ["Default"] = false,
+            ["Flag"] = "auto_sell",
+            ["Callback"] = function(arg1_20, ...)
+                args = arg1_20;
+                tbl7.AutoSell = args;
+                if args then
+                    v22 = print("[Sell] Auto Sell enabled");
+                    v22 = spawn(function(...)
+                        while tbl7.AutoSell do
+                            v22 = pcall(function(...)
+                                v22 = tbl[36]();
+                                return;
+                            end);
+                            v22 = task.wait(2);
+                        end;
+                        v22 = print("[Sell] Auto Sell disabled");
+                        return;
+                    end);
+                else
+                    v22 = print("[Sell] Auto Sell disabled");
+                end;
+                return;
+            end
+        });
+        r242.CreateToggle(r242, {
+            ["Name"] = "Auto Steal",
+            ["Default"] = false,
+            ["Flag"] = "auto_steal",
+            ["Callback"] = function(arg1_21, ...)
+                args = arg1_21;
+                tbl7.AutoSteal = args;
+                if args then
+                    v22 = print("[Steal] Auto Steal enabled");
+                    v22 = spawn(function(...)
+                        while tbl7.AutoSteal do
+                            if not tbl7.IsStealing then
+                                tbl7.IsStealing = true;
+                                args = fn5();
+                                index3 = fn20(args);
+                                v22 = print("[Steal] Found " .. #index3 .. " other plots");
+                                index2 = CFrame.new(0, 100, 0);
+                                if args then
+                                    xfindFirstChild = args.FindFirstChild(args, "Visual");
+                                    v23 = xfindFirstChild and xfindFirstChild.FindFirstChild(xfindFirstChild, "PlantAreaColumn1");
+                                    if v23 then
+                                        v22 = v23.IsA(v23, "BasePart");
+                                    end;
+                                    if v23 then
+                                        index2 = v23.CFrame + Vector3.new(0, 5, 0);
+                                    end;
+                                end;
+                                num = ("\x92>h")[3];
+                                for num, fn4 in ("\x92>h")[1],  pairs(index3) do
+                                    pcallResult = num;
+                                    if not tbl7.AutoSteal then
+                                    else
+                                        v6GetService = print("[Steal] Stealing from plot " .. num .. "/" .. #fn20(args) .. " (" .. fn4.Name .. ")");
+                                        v6GetService = fn25(fn4, tableLibConcat(0, 100, v23));
+                                        v6GetService = task.wait(1);
+                                    end;
+                                end;
+                                xfindFirstChild = print("[Steal] Cycle done");
+                                tbl7.IsStealing = false;
+                                args = task.wait(5);
+                            end;
+                        end;
+                        print("[Steal] Auto Steal disabled");
+                        return;
+                    end);
+                else
+                    v22 = print("[Steal] Auto Steal disabled");
+                end;
+                return;
+            end
+        });
+        r502 = njCreateWindow;
+        pjCreateTab = r502.CreateTab(r502, {
+            ["Name"] = "Shop",
+            ["Icon"] = "sliders"
+        });
+        r502 = pjCreateTab.CreateSection(pjCreateTab, "Seeds Shop");
+        qj = "Banana";
+        tj = {
+            "All",
+            "Acorn",
+            "Apple",
+            "Baby Cactus",
+            "Bamboo",
+            qj,
+            "Blueberry",
+            "Cactus",
+            "Carrot",
+            "Cherry",
+            "Coconut",
+            "Corn",
+            "Dragon Fruit",
+            "Dragon's Breath",
+            "Ghost Pepper",
+            "Glow Mushroom",
+            "Gold",
+            "Grape",
+            "Green Bean",
+            "Horned Melon",
+            "Mango",
+            "Moon Bloom",
+            "Mushroom",
+            "Pineapple",
+            "Poison Apple",
+            "Poison Ivy",
+            "Pomegranate",
+            "Rainbow",
+            "Romanesco",
+            "Strawberry",
+            "Sunflower",
+            "Tomato",
+            "Tulip",
+            "Venus Fly Trap"
+        };
+        tbl9 = {};
+        qj2 = qj[2];
+        kj = qj[3];
+        for kj, qj in pairs(tj) do
+            yj = kj;
+            if qj ~= "All" then
+                sj = table.insert(tbl9, qj);
+            end;
+        end;
+        r502.CreateDropdown(r502, {
+            ["Name"] = "Select Seeds",
+            ["Options"] = tj,
+            ["Default"] = {
+                "Carrot"
+            },
+            ["Multi"] = true,
+            ["Search"] = true,
+            ["Flag"] = "selected_seeds",
+            ["Callback"] = function(arg1_22, ...)
+                args = arg1_22;
+                index2 = v23[2];
+                v23 = v23[1];
+                for xfindFirstChild, pcallResult in pairs(args) do
+                    num = xfindFirstChild;
+                    if pcallResult == "All" then
+                        index3 = true;
+                    else
+
+                    end;
+                end;
+                v23 = arg1_22;
+                tbl7.SelectedSeeds = v23;
+                return;
+            end
+        });
+        r502.CreateToggle(r502, {
+            ["Name"] = "Auto Buy Seeds",
+            ["Default"] = false,
+            ["Flag"] = "auto_buy_seeds",
+            ["Callback"] = function(arg1_23, ...)
+                args = arg1_23;
+                tbl7.AutoBuySeeds = args;
+                if args then
+                    v22 = spawn(function(...)
+                        while tbl7.AutoBuySeeds do
+                            xfindFirstChild = setmetatable2;
+                            if tbl7.SelectedSeeds and #tbl7.SelectedSeeds > 0 then
+                                xfindFirstChild = tbl7;
+                                index2 = xfindFirstChild.SelectedSeeds;
+                                args = xfindFirstChild[2];
+                                index3 = xfindFirstChild[3];
+                                for index3, v23 in pairs("pairs") do
+                                    xfindFirstChild = index3;
+                                    if not tbl7.AutoBuySeeds then
+                                    else
+                                        if fn18(v23) > 0 then
+                                            pcallResult = fn16(v23);
+                                        end;
+                                        pcallResult = task.wait(.3);
+                                    end;
+                                end;
+                            end;
+                            args = task.wait(0.5);
+                        end;
+                        return;
+                    end);
+                end;
+                return;
+            end
+        });
+        r502.CreateButton(r502, {
+            ["Name"] = "Buy Seeds Once",
+            ["Callback"] = function(...)
+                tableLibConcat = tbl7.SelectedSeeds;
+                if tableLibConcat then
+                    v22 = #tableLibConcat > 0;
+                end;
+                if tableLibConcat then
+                    index2 = xfindFirstChild[3];
+                    xfindFirstChild = xfindFirstChild[1];
+                    for index2, num in xfindFirstChild,  pairs(tableLibConcat) do
+                        pcall(fn16, num);
+                        task.wait(.2);
+                    end;
+                    tableLibConcat = loadstring2;
+                    index3 = tableLibConcat.Notify(tableLibConcat, {
+                        ["Title"] = "Shop",
+                        ["Text"] = "Bought " .. #tableLibConcat .. " seeds",
+                        ["Type"] = "success",
+                        ["Duration"] = 2
+                    });
+                else
+                    tableLibConcat = loadstring2;
+                    index3 = tableLibConcat.Notify(tableLibConcat, {
+                        ["Title"] = "Shop",
+                        ["Text"] = "No seeds selected!",
+                        ["Type"] = "warning",
+                        ["Duration"] = 2
+                    });
+                end;
+                return;
+            end
+        });
+        yj = pjCreateTab.CreateSection(pjCreateTab, "Gear Shop");
+        gnome = "Gnome";
+        nj = {
+            "All",
+            "Basic Pot",
+            "Common Sprinkler",
+            "Common Watering Can",
+            "Flashbang",
+            gnome,
+            "Invisibility Mushroom",
+            "Jump Mushroom",
+            "Lantern",
+            "Legendary Sprinkler",
+            "Rare Sprinkler",
+            "Shrink Mushroom",
+            "Sign",
+            "Speed Mushroom",
+            "Super Sprinkler",
+            "Super Watering Can",
+            "Supersize Mushroom",
+            "Teleporter",
+            "Trowel",
+            "Uncommon Sprinkler",
+            "Wheelbarrow"
+        };
+        tbl10 = {};
+        dj = gnome[2];
+        sj = gnome[3];
+        for sj, gnome in pairs(nj) do
+            qj2 = sj;
+            if gnome ~= "All" then
+                center = table.insert(tbl10, gnome);
+            end;
+        end;
+        yj.CreateDropdown(yj, {
+            ["Name"] = "Select Gear",
+            ["Options"] = nj,
+            ["Default"] = {
+                "Common Watering Can"
+            },
+            ["Multi"] = true,
+            ["Search"] = true,
+            ["Flag"] = "selected_gear",
+            ["Callback"] = function(arg1_24, ...)
+                args = arg1_24;
+                xfindFirstChild = v23[3];
+                v23 = v23[1];
+                for xfindFirstChild, pcallResult in v23,  pairs(args) do
+                    num = xfindFirstChild;
+                    if pcallResult == "All" then
+                        index3 = true;
+                    else
+
+                    end;
+                end;
+                v23 = arg1_24;
+                tbl7.SelectedGear = v23;
+                return;
+            end
+        });
+        yj.CreateToggle(yj, {
+            ["Name"] = "Auto Buy Gear",
+            ["Default"] = false,
+            ["Flag"] = "auto_buy_gear",
+            ["Callback"] = function(arg1_25, ...)
+                args = arg1_25;
+                tbl7.AutoBuyGear = args;
+                if args then
+                    v22 = spawn(function(...)
+                        while tbl7.AutoBuyGear do
+                            xfindFirstChild = setmetatable2;
+                            index2 = "SelectedGear";
+                            if tbl7[index2] and #tbl7.SelectedGear > 0 then
+                                xfindFirstChild = tbl7;
+                                index2 = xfindFirstChild.SelectedGear;
+                                args = xfindFirstChild[2];
+                                index2 = xfindFirstChild[1];
+                                for index3, v23 in pairs(index2) do
+                                    xfindFirstChild = index3;
+                                    if not tbl7.AutoBuyGear then
+                                    else
+                                        if fn19(v23) > 0 then
+                                            pcallResult = fn17(v23);
+                                        end;
+                                        pcallResult = task.wait(.3);
+                                    end;
+                                end;
+                            end;
+                            args = task.wait(0.5);
+                        end;
+                        return;
+                    end);
+                end;
+                return;
+            end
+        });
+        yj.CreateButton(yj, {
+            ["Name"] = "Buy Gear Once",
+            ["Callback"] = function(...)
+                tableLibConcat = tbl7.SelectedGear;
+                if tableLibConcat then
+                    v22 = #tableLibConcat > 0;
+                end;
+                if tableLibConcat then
+                    index2 = xfindFirstChild[3];
+                    xfindFirstChild = xfindFirstChild[1];
+                    for index2, num in xfindFirstChild,  pairs(tableLibConcat) do
+                        pcall(fn17, num);
+                        task.wait(.2);
+                    end;
+                    tableLibConcat = loadstring2;
+                    index3 = tableLibConcat.Notify(tableLibConcat, {
+                        ["Title"] = "Shop",
+                        ["Text"] = "Bought " .. #tableLibConcat .. " gear",
+                        ["Type"] = "success",
+                        ["Duration"] = 2
+                    });
+                else
+                    tableLibConcat = loadstring2;
+                    index3 = tableLibConcat.Notify(tableLibConcat, {
+                        ["Title"] = "Shop",
+                        ["Text"] = "No gear selected!",
+                        ["Type"] = "warning",
+                        ["Duration"] = 2
+                    });
+                end;
+                return;
+            end
+        });
+        qj2 = njCreateWindow;
+        qj = qj2.CreateTab(qj2, {
+            ["Name"] = "Misc",
+            ["Icon"] = "bolt"
+        });
+        qj2 = qj.CreateSection(qj, "Player");
+        qj2.CreateSlider(qj2, {
+            ["Name"] = "WalkSpeed",
+            ["Min"] = 16,
+            ["Max"] = 500,
+            ["Default"] = 16,
+            ["Flag"] = "walkspeed",
+            ["Callback"] = function(arg1_26, ...)
+                index3 = localPlayer.Character;
+                v22 = index3;
+                index2 = v22 and index3.FindFirstChildOfClass(index3, "Humanoid");
+                if index2 then
+                    v22 = arg1_26;
+                    index2.WalkSpeed = v22;
+                end;
+                return;
+            end
+        });
+        qj2.CreateSlider(qj2, {
+            ["Name"] = "JumpPower",
+            ["Min"] = 50,
+            ["Max"] = 500,
+            ["Default"] = 50,
+            ["Flag"] = "jumppower",
+            ["Callback"] = function(arg1_27, ...)
+                index3 = localPlayer.Character;
+                v22 = index3;
+                index2 = v22 and index3.FindFirstChildOfClass(index3, "Humanoid");
+                if index2 then
+                    index2.UseJumpPower = true;
+                    v22 = arg1_27;
+                    index2.JumpPower = v22;
+                end;
+                return;
+            end
+        });
+        dj = qj.CreateSection(qj, "Fly");
+        flag3 = false;
+        qj2.CreateSlider(qj2, {
+            ["Name"] = "Fly Speed",
+            ["Min"] = 10,
+            ["Max"] = 500,
+            ["Default"] = 80,
+            ["Flag"] = "fly_speed",
+            ["Callback"] = function(arg1_28, ...)
+                tbl7.FlySpeed = arg1_28;
+                return;
+            end
+        });
+        dj.CreateToggle(dj, {
+            ["Name"] = "Fly",
+            ["Default"] = false,
+            ["Flag"] = "fly_enabled",
+            ["Callback"] = function(arg1_29, ...)
+                args = arg1_29;
+                tableLibConcat = arg1_29;
+                flag3 = tableLibConcat;
+                index3 = localPlayer.Character;
+                if index3 then
+                    v22 = index3.FindFirstChild(index3, "HumanoidRootPart");
+                end;
+                tableLibConcat = tableLibConcat;
+                xfindFirstChild = tableLibConcat;
+                if index3 then
+                    v22 = index3.FindFirstChildOfClass(index3, "Humanoid");
+                end;
+                tableLibConcat = index3;
+                v22 = not index3 or not index3;
+                tableLibConcat = tableLibConcat;
+                if v22 then
+                    return;
+                end;
+                if args then
+                    index3.PlatformStand = true;
+                    bodyVelocity = Instance.new("BodyVelocity");
+                    bodyVelocity.Velocity = Vector3.zero;
+                    bodyVelocity.MaxForce = Vector3.new(100000, 100000, 100000);
+                    pcallResult = index3;
+                    bodyVelocity.Parent = pcallResult;
+                    bodyGyro = Instance.new("BodyGyro");
+                    bodyGyro.MaxTorque = Vector3.new(100000, 100000, 100000);
+                    bodyGyro.P = 10000;
+                    bodyGyro.CFrame = index3.CFrame;
+                    bodyGyro.Parent = index2;
+                    v22 = game;
+                    v3GetService = v22.GetService(v22, "UserInputService");
+                    v22 = v2GetService.Heartbeat;
+                    v3Connect = v22.Connect(v22, function(...)
+                        if not flag3 then
+                            return;
+                        end;
+                        index3 = workspace.CurrentCamera;
+                        index2 = Vector3.zero;
+                        v22 = v3GetService;
+                        if v22.IsKeyDown(v22, Enum.KeyCode.W) then
+                            index2 = Vector3.zero + index3.CFrame.LookVector;
+                        end;
+                        xfindFirstChild = v3GetService;
+                        if xfindFirstChild.IsKeyDown(xfindFirstChild, Enum.KeyCode.v5) then
+                            index2 = Vector3.zero - index3.CFrame.LookVector;
+                        end;
+                        v23 = v3GetService;
+                        if v23.IsKeyDown(v23, Enum.KeyCode.A) then
+                            index2 = Vector3.zero - index3.CFrame.RightVector;
+                        end;
+                        num = v3GetService;
+                        if num.IsKeyDown(num, Enum.KeyCode.D) then
+                            index2 = Vector3.zero + index3.CFrame.RightVector;
+                        end;
+                        pcallResult = v3GetService;
+                        if pcallResult.IsKeyDown(pcallResult, Enum.KeyCode.Space) then
+                            index2 = Vector3.zero + Vector3.new(0, 1, 0);
+                        end;
+                        fn4 = v3GetService;
+                        if fn4.IsKeyDown(fn4, Enum.KeyCode.LeftShift) then
+                            index2 = Vector3.zero - Vector3.new(0, 1, 0);
+                        end;
+                        if index2.Magnitude > 0 then
+                            bodyVelocity.Velocity = index2.Unit * (tbl7.FlySpeed or 80);
+                            bodyGyro.CFrame = CFrame.lookAt(Vector3.zero, index2);
+                        else
+                            bodyVelocity.Velocity = Vector3.zero;
+                        end;
+                        return;
+                    end);
+                else
+                    if v3Connect then
+                        v22 = v3Connect;
+                        v22.Disconnect(v22);
+                    end;
+                    if bodyVelocity then
+                        fn4 = bodyVelocity;
+                        fn4.Destroy(fn4);
+                    end;
+                    if bodyGyro then
+                        v6GetService = bodyGyro;
+                        v6GetService.Destroy(v6GetService);
+                    end;
+                    index3.PlatformStand = false;
+                    return;
+                end;
+            end
+        });
+        sj = qj.CreateSection(qj, "Anti");
+        sj.CreateToggle(sj, {
+            ["Name"] = "Anti AFK",
+            ["Default"] = false,
+            ["Flag"] = "anti_afk",
+            ["Callback"] = function(arg1_30, ...)
+                args = arg1_30;
+                tbl7.AntiAFK = args;
+                if args then
+                    v22 = spawn(function(...)
+                        tableLibConcat = game;
+                        args = tableLibConcat.GetService(tableLibConcat, "VirtualInputManager");
+                        while tbl7.AntiAFK do
+                            tableLibConcat = args.SendMouseButtonEvent(args, 0, 0, 0, false, game, 0);
+                            v22 = task.wait(60);
+                        end;
+                        return;
+                    end);
+                    tableLibConcat = localPlayer.Idled;
+                    index3 = tableLibConcat.Connect(tableLibConcat, function(...)
+                        v22 = tbl7;
+                        if v22.AntiAFK then
+                            tableLibConcat = game;
+                            v22 = tableLibConcat.GetService(tableLibConcat, "VirtualInputManager");
+                            tableLibConcat = v22.SendKeyEvent(v22, true, "W", false, game);
+                            v22 = task.wait(.1);
+                            tableLibConcat = game;
+                            v22 = tableLibConcat.GetService(tableLibConcat, "VirtualInputManager");
+                            tableLibConcat = v22.SendKeyEvent(v22, false, "W", false, game);
+                        end;
+                        return;
+                    end);
+                    tbl7.AntiAFKConn = index3;
+                else
+                    if tbl7.AntiAFKConn then
+                        tableLibConcat = tbl7.AntiAFKConn;
+                        index3 = tableLibConcat.Disconnect(tableLibConcat);
+                        tbl7.AntiAFKConn = nil;
+                    end;
+                    return;
+                end;
+            end
+        });
+        xj = qj.CreateSection(qj, "Float");
+        flag4 = false;
+        xj.CreateSlider(xj, {
+            ["Name"] = "Float Height",
+            ["Min"] = 1,
+            ["Max"] = 100,
+            ["Default"] = 5,
+            ["Flag"] = "float_height",
+            ["Callback"] = function(arg1_31, ...)
+                tbl7.FloatHeight = arg1_31;
+                return;
+            end
+        });
+        xj.CreateToggle(xj, {
+            ["Name"] = "Float",
+            ["Default"] = false,
+            ["Flag"] = "float_enabled",
+            ["Callback"] = function(arg1_32, ...)
+                args = arg1_32;
+                tableLibConcat = arg1_32;
+                flag4 = tableLibConcat;
+                index2 = tableLibConcat;
+                index3 = localPlayer.Character;
+                if index3 then
+                    v22 = index3.FindFirstChild(index3, "HumanoidRootPart");
+                end;
+                tableLibConcat = 13;
+                f = index3;
+                if index3 then
+                    v22 = index3.FindFirstChildOfClass(index3, "Humanoid");
+                end;
+                tableLibConcat = tableLibConcat;
+                num = not f;
+                v22 = num;
+                if num then
+                    tableLibConcat = tableLibConcat;
+                    if v22 then
+                        return;
+                    end;
+                    if args then
+                        v23 = tableLibConcat;
+                        bodyPosition = Instance.new("BodyPosition");
+                        bodyPosition.Position = Vector3.new(f.Position.X, f.Position.Y + (tbl7.FloatHeight or 5), f.Position.Z);
+                        bodyPosition.MaxForce = Vector3.new(0, 100000, 0);
+                        bodyPosition.P = 5000;
+                        bodyPosition.D = 500;
+                        bodyPosition.Parent = f;
+                        v22 = v2GetService.Heartbeat;
+                        v3Connect2 = v22.Connect(v22, function(...)
+                            if not flag4 or (not bodyPosition or not bodyPosition.Parent) then
+                                return;
+                            end;
+                            bodyPosition.Position = Vector3.new(f.Position.X, f.Position.Y, f.Position.Z);
+                            bodyPosition.MaxForce = Vector3.new(0, 100000, 0);
+                            v22 = workspace;
+                            index3 = v22.Raycast(v22, f.Position, Vector3.new(0, -100, 0));
+                            if index3 then
+                                bodyPosition.Position = Vector3.new(f.Position.X, index3.Position.Y + (tbl7.FloatHeight or 5), f.Position.Z);
+                            end;
+                            return;
+                        end);
+                    else
+                        if v3Connect2 then
+                            v22 = v3Connect2;
+                            v22.Disconnect(v22);
+                        end;
+                        if bodyPosition then
+                            v23 = bodyPosition;
+                            v23.Destroy(v23);
+                        end;
+                        return;
+                    end;
+                else
+                    v22 = not index3;
+                end;
+            end
+        });
+        r503 = njCreateWindow;
+        ujCreateTab = r503.CreateTab(r503, {
+            ["Name"] = "Dupe (For Fun)",
+            ["Icon"] = "bolt"
+        });
+        r503 = ujCreateTab.CreateSection(ujCreateTab, "Item Spawner");
+        r503.CreateLabel(r503, "Coming Soon...");
+        r504 = njCreateWindow;
+        wj = r504.CreateTab(r504, {
+            ["Name"] = "Settings",
+            ["Icon"] = "settings"
+        });
+        wj.CreateConfigSection(wj, "Config Manager");
+        r504 = wj.CreateSection(wj, "UI Settings");
+        r504.CreateKeybind(r504, {
+            ["Name"] = "Toggle Key",
+            ["Description"] = "Key to show/hide the UI",
+            ["Default"] = Enum.KeyCode.RightShift,
+            ["Flag"] = "toggle_key",
+            ["Callback"] = function(arg1_33, ...)
+                tableLibConcat = njCreateWindow;
+                tableLibConcat.SetToggleKey(tableLibConcat, arg1_33);
+                return;
+            end
+        });
+        config = njCreateWindow.Config;
+        bj = {
+            config.LoadAutoload(config)
+        };
+        if config.LoadAutoload(config) then
+            config = loadstring2;
+            bj = config.Notify(config, {
+                ["Title"] = "Autoload",
+                ["Text"] = "Loaded config '" .. bj[2] .. "'",
+                ["Duration"] = 3
+            });
+        end;
+        print("[LocalHub] Grow a Garden 2 script loaded successfully!");
+        return;
+    end;
+end;
+return (function(...)
+    while true do
+        l22 = l12;
+        l12 = l22;
+        fn3();
+    end;
+    return;
+end)();
